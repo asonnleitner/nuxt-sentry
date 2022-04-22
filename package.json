@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
+  "packageManager": "pnpm@6.32.9",
   "exports": {
     ".": {
       "import": "./dist/module.mjs",
@@ -21,14 +22,20 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
-    "@nuxt/kit": "npm:@nuxt/kit-edge@latest"
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
+    "@sentry/node": "latest",
+    "@sentry/tracing": "latest",
+    "@sentry/vue": "latest"
   },
   "devDependencies": {
     "@nuxt/module-builder": "latest",
+    "@nuxt/ui": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
+    "@sentry/webpack-plugin": "latest",
     "eslint": "latest",
     "eslint-plugin-import": "latest",
     "nuxt": "npm:nuxt3@latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vue": "latest"
   }
 }

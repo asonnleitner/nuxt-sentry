@@ -1,11 +1,9 @@
 import { defineNuxtConfig } from 'nuxt'
-import NuxtSentry from '..'
+import NuxtSentry from '../src/module'
 
 export default defineNuxtConfig({
   modules: [
-    NuxtSentry
+    NuxtSentry, '@nuxt/ui'
   ],
-  sentry: {
-    addPlugin: true
-  }
+  sentry: {}
 })

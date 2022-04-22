@@ -3,6 +3,7 @@
     "@nuxtjs/eslint-config-typescript"
   ],
   "rules": {
+    "no-console": "off",
     "@typescript-eslint/no-unused-vars": [
       "off"
     ]
