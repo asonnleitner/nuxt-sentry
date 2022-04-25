@@ -15,5 +15,6 @@ Sentry.init({
 })
 
 export default <NitroErrorHandler> function (error, event) {
+  Sentry.captureException(error)
   event.res.end('[custom error handler] ' + error.stack)
 }

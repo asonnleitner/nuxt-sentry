@@ -25,7 +25,16 @@ export default defineNuxtModule<SentryModuleOptions>({
 
     // add runtime dir to transpile
     nuxt.options.build.transpile.push(runtimeDir)
-    addPlugin(resolve(runtimeDir, 'plugin'))
+
+    addPlugin({
+      src: resolve(runtimeDir, 'plugin.client.ts'),
+      mode: 'client'
+    })
+
+    addPlugin({
+      src: resolve(runtimeDir, 'plugin.server.ts'),
+      mode: 'server'
+    })
 
     // print some warnings
     if (isDef(nuxt.options.nitro.errorHandler)) { logger.warn('`nuxt.options.nitro.errorHandler` is already defined, will be overwritten') }
